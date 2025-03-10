@@ -1,6 +1,8 @@
-def main():
-    print("Hello from myapp!")
+from  fastapi import FastAPI
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get('/')
+def defaultRoot():
+    return "hello to fastapi app"
+
